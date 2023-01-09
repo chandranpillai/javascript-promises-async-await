@@ -1,10 +1,9 @@
-import { result } from "lodash";
-import { fetchWithTimeout } from "./services";
+import {fetchWithTimeout} from "./services";
+var movies = require("./data/movies.json")
 
 fetchMovies();
 export function fetchMovies() {
-    let movies = require ("./data/movies.json")
-    const resolveFunction = movies();
+    const resolveFunction = () => movies();
     fetchWithTimeout(1000)
     .then(resolveFunction);
  }
@@ -14,5 +13,6 @@ export function fetchMovies() {
  
  moviePromise()
     .then(Promise.resolve(results))
+    return;
     console.log(results)
  })
