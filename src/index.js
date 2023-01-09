@@ -8,7 +8,8 @@ export function fetchMovies() {
  }
  
  const moviePromise = fetchMovies();
- moviePromise.the(results => {
+ moviePromise
+ .then(results => {
     console.log(results);
  })
  
