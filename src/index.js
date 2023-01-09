@@ -1,3 +1,2 @@
-function fetchMovies() {
-
-}
+fetchMovies();
+function fetchMovies() { }
