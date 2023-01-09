@@ -1,2 +1,2 @@
 fetchMovies();
-function fetchMovies() { }
+export function fetchMovies() { }
