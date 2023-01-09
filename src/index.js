@@ -3,16 +3,19 @@ var movies = require("./data/movies.json")
 
 fetchMovies();
 export function fetchMovies() {
-    const resolveFunction = () => movies();
+    const resolveFunction = function() {
+        return movies();
+    }
+    
     fetchWithTimeout(1000)
     .then(resolveFunction);
  }
  
- const moviePromise = new Promise(function(results) {
-    fetchMovies();
+ const moviePromise = new Promise(fetchMovies());
  
- moviePromise()
+ moviePromise() 
     .then(Promise.resolve(results))
     return;
     console.log(results)
- })
+ 
+ 
