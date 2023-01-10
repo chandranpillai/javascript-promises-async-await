@@ -34,3 +34,16 @@ export function fetchMovies() {
 
     }
  }
+
+ export async function asyncFetchBooks() {
+    try {
+        const response = await fetch("/data/books.jason");
+        const results = await response.json()
+        return results;
+
+    }
+    catch(error) {
+        console.log(error);
+
+    }
+}
