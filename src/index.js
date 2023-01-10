@@ -55,15 +55,19 @@ async function getBooksOrMoviesAsync() {
 
 }
 
-getBooksAndMoviesAsync(results)
-.then (console.log("movies and books", {
+getBooksAndMoviesAsync()
+.then(results => {
+    console.log("movies and books", {
     movies: results.movies,
-    books: results.books
-  }));
+    books: results.books,
+  });
+});
 
-  getBooksOrMoviesAsync(results)
-  .then (console.log("movies OR books", {
-    results
-  }));
+getBooksOrMoviesAsync()
+.then(results => {
+    console.log("movies OR books", {
+        results,
+    });
+});
 
 
