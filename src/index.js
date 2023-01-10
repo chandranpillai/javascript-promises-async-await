@@ -53,9 +53,12 @@ getBooksAndMoviesAsync()
     console.log("movies and books", {
     movies: results.movies,
     books: results.books,
-  })
-  .catch(console.error("Error in getBooksAndMoviesAsync execution", error));
+  });
+})
+.catch(error => {
+    console.error("Error in getBooksAndMoviesAsync execution", error);
 });
+
 
 
 
